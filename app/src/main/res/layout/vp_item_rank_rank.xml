@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_gray"
+            android:text="名次"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/text_gray"
+            android:layout_marginLeft="88dp"
+            android:text="用户"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            style="@style/text_gray"
+            android:layout_width="70dp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:text="H值"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@mipmap/main_rank_divider" />
+
+</LinearLayout>

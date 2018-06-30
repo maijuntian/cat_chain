@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/record_bg">
+
+    <ImageView
+        android:id="@+id/iv_head_icon"
+        android:layout_width="match_parent"
+        android:layout_height="222dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:src="@mipmap/record_head_bg" />
+
+    <ImageView
+        android:id="@+id/iv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_return" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_white"
+            android:layout_marginTop="22dp"
+            android:text="收支记录"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/text_xblue"
+            android:layout_marginTop="22dp"
+            android:text="不知名的小伙子"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_h"
+                    style="@style/text_white"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_white"
+                    android:text="H值总数"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_m"
+                    style="@style/text_white"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_white"
+                    android:text="喵钻总量"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_chart"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="17dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <RadioButton
+                    android:id="@+id/rb_button_h"
+                    style="@style/text_white"
+                    android:background="@drawable/record_tab_selector"
+                    android:button="@color/trans"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="3dp"
+                    android:text="H值"
+                    android:textColor="@drawable/text_white_xblue_selector"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_button_m"
+                    style="@style/text_white"
+                    android:background="@drawable/record_tab_selector"
+                    android:button="@color/trans"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="3dp"
+                    android:text="喵钻"
+                    android:textColor="@drawable/text_white_xblue_selector"
+                    android:textSize="10sp" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/iv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/record_icon_rili" />
+
+            <ImageView
+                android:id="@+id/iv_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="150dp"
+                android:src="@mipmap/record_land_icon" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_h"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/record_radio_selector"
+                android:button="@color/trans"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_zuan"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/record_radio_selector"
+                android:button="@color/trans" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/text_white"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp"
+            android:text="收支记录"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <View style="@style/divider" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:divider="#33586776"
+            android:dividerHeight="1dp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/land_record_bg"
+    android:paddingBottom="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+
+
+    <ImageView
+        android:id="@+id/iv_icon_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:src="@mipmap/land_record_cal" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        style="@style/text_white"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/iv_icon_cal"
+        android:text="收支趋势"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/text_swhite"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/iv_icon_cal"
+        android:text="2018.05.15 24：00"
+        android:textSize="10sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_button_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/land_record_tab_selector"
+            android:button="@color/trans"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:paddingTop="7dp"
+            android:text="H值"
+            android:textColor="@drawable/text_white_xblue_selector"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_button_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/land_record_tab_selector"
+            android:button="@color/trans"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:paddingTop="7dp"
+            android:text="喵钻"
+            android:textColor="@drawable/text_white_xblue_selector"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_tab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_yellow"
+            android:drawableRight="@drawable/land_record_shou"
+            android:text="收" />
+
+        <TextView
+            style="@style/text_green"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/land_record_zhi"
+            android:text="支" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_return"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/land_record_close"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="92dp" />
+
+</RelativeLayout>

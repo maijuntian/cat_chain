@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_advert"
+        android:layout_width="match_parent"
+        android:layout_height="195dp">
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/cb_advert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            app:autoTurningTime="3000"
+            app:canLoop="true" />
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:src="@mipmap/icon_return" />
+
+        <TextView
+            style="@style/text_white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:text="H值任务"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- <TextView
+         android:id="@+id/tv_up_speed"
+         style="@style/text_white"
+         android:layout_width="match_parent"
+         android:layout_alignParentBottom="true"
+         android:background="#009eff"
+         android:gravity="center_horizontal"
+         android:paddingBottom="10dp"
+         android:paddingTop="10dp"
+         android:text="立即加速猫钻" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_advert">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/text_black"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/task_index"
+                android:drawablePadding="3dp"
+                android:text="基础任务"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.mai.cat_chain.widget.GridViewForScrollView
+                android:id="@+id/gv_base_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="21dp"
+                android:numColumns="3"
+                android:verticalSpacing="35dp" />
+
+
+            <TextView
+                style="@style/text_black"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/task_index"
+                android:drawablePadding="3dp"
+                android:text="今日任务"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.mai.cat_chain.widget.ListViewForScrollView
+                android:id="@+id/lv_today_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:divider="@color/trans"
+                android:dividerHeight="10dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

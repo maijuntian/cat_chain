@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:id="@+id/ll_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cheats"
+                style="@style/text_white"
+                android:background="@mipmap/main_button_mid"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:text="喵钻秘籍"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_task"
+                style="@style/text_white"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/main_button_mid"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:text="获取H值"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:src="@mipmap/main_cat" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_h_value"
+                style="@style/text_white"
+                android:drawableLeft="@mipmap/main__icon_h"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="H值：0"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_m_value"
+                style="@style/text_white"
+                android:layout_marginTop="6dp"
+                android:drawableLeft="@mipmap/main_icon_zuan"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="喵钻：0"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_1"
+            style="@style/text_white"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="55dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_2"
+            style="@style/text_white"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="99dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_3"
+            style="@style/text_white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="133dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_4"
+            style="@style/text_white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="203dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_5"
+            style="@style/text_white"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="240dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_6"
+            style="@style/text_white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="44dp"
+            android:layout_marginTop="46dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_7"
+            style="@style/text_white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="124dp"
+            android:layout_marginTop="74dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_8"
+            style="@style/text_white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="110dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_9"
+            style="@style/text_white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="64dp"
+            android:layout_marginTop="171dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <com.mai.cat_chain.widget.DiamondView
+            android:id="@+id/dv_10"
+            style="@style/text_white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="235dp"
+            android:drawableTop="@mipmap/main_zuan"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="+0.32747"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+    <com.mai.cat_chain.widget.SwipeRefreshLayoutCompat
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_h"
+                    style="@style/text_white"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/main_icon_go"
+                    android:text="H值排行榜"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_m"
+                    style="@style/text_white"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/main_icon_go"
+                    android:text="喵钻排行榜"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/text_gray"
+                android:layout_marginTop="3dp"
+                android:text="更新时间:2018-05-15 24:00"
+                android:textSize="10sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_h"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/main_radio_selector"
+                    android:button="@color/trans"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb_zuan"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/main_radio_selector"
+                    android:button="@color/trans" />
+
+            </RadioGroup>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_rank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+    </com.mai.cat_chain.widget.SwipeRefreshLayoutCompat>
+
+</LinearLayout>

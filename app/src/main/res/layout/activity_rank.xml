@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/rank_bg">
+
+    <com.mai.cat_chain.widget.SwipeRefreshLayoutCompat
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rg_base"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp">
+
+                <TextView
+                    android:id="@+id/tv_h"
+                    style="@style/text_white"
+                    android:background="@mipmap/rank_font_light"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:text="H值排行榜"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_m"
+                    style="@style/text_white"
+                    android:background="@mipmap/rank_font_light"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:text="喵钻排行榜"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/text_sgray"
+                android:text="更新时间:2018-05-15 24:00"
+                android:textSize="10sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_h"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/main_radio_selector"
+                    android:button="@color/trans"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb_zuan"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/main_radio_selector"
+                    android:button="@color/trans" />
+
+            </RadioGroup>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_rank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </com.mai.cat_chain.widget.SwipeRefreshLayoutCompat>
+
+    <ImageView
+        android:id="@+id/iv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_return" />
+
+
+</RelativeLayout>

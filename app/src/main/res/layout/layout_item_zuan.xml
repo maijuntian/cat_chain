@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mai.cat_chain.widget.DiamondView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/main_icon_zuan_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/text_white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="7dp"
+        android:text="@string/zuan_tip"
+        android:textSize="6sp" />
+
+</com.mai.cat_chain.widget.DiamondView>

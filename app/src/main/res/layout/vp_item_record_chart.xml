@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:background="@mipmap/record_bg_chart"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_tip"
+        style="@style/text_white"
+        android:text="收支趋势"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/text_swhite"
+        android:layout_below="@id/tv_tip"
+        android:layout_marginTop="3dp"
+        android:text="2018.05.15 24：00"
+        android:textSize="7sp" />
+
+    <TextView
+        android:id="@+id/tv_shou"
+        style="@style/text_yellow"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/line_shou"
+        android:text="收"
+        android:textSize="7sp" />
+
+
+    <TextView
+        style="@style/text_green"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_shou"
+        android:drawableRight="@drawable/line_zhi"
+        android:text="支"
+        android:textSize="7sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <com.mai.cat_chain.widget.YLineChartView
+            android:id="@+id/yLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp">
+
+            <com.mai.cat_chain.widget.XLineChartView
+                android:id="@+id/xLine"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:background="@drawable/task_bg"
+    android:padding="15dp">
+
+    <TextView
+        style="@style/text_red"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_black"
+        android:text="猫博士体测体测体测体测体测体测体测体"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/text_xgray"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:lineSpacingExtra="3dp"
+        android:text="系统检测，你已经半个月没有进行体测了哟，定期体测有利于身体健康"
+        android:textSize="12sp" />
+
+</RelativeLayout>

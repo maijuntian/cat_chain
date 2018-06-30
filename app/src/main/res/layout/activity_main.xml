@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg">
+
+
+    <RadioGroup
+        android:id="@+id/rg_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/rb_cat_base"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_bottom_selector"
+            android:button="@color/trans"
+            android:gravity="center"
+            android:text="喵星基地"
+            android:textColor="@drawable/text_white_blue_selector"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_my_base"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_bottom_selector"
+            android:button="@color/trans"
+            android:gravity="center"
+            android:text="我的基地"
+            android:textColor="@drawable/text_white_blue_selector"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <!--   <include
+           layout="@layout/fragment_cat_base"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_above="@id/rg_base" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_base" />
+
+
+    <ImageView
+        android:id="@+id/iv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_return" />
+
+
+    <ImageView
+        android:id="@+id/iv_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:src="@mipmap/me_set"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_set"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/me_logout"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

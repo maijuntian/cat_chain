@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/rank_item_bg"
+    android:orientation="horizontal">
+
+    <com.mai.cat_chain.widget.XiaoBoTextView
+        android:id="@+id/tv_index"
+        style="@style/text_swhite"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/rank_mingci_bg"
+        android:gravity="center"
+        android:text="04" />
+
+    <ImageView
+        android:id="@+id/iv_head_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="90dp"
+        android:background="@mipmap/rank_user_head_bg" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        style="@style/text_swhite"
+        android:layout_width="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:gravity="right"
+        android:text="63,3231"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/text_swhite"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/tv_value"
+        android:layout_toRightOf="@id/iv_head_icon"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="啦啦啦"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

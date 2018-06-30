@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    android:orientation="horizontal">
+
+    <com.mai.cat_chain.widget.YLineChartLandView
+        android:id="@+id/yLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginLeft="20dp">
+
+        <com.mai.cat_chain.widget.XLineChartLandView
+            android:id="@+id/xLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
