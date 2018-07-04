@@ -41,20 +41,42 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".block.main.MainActivity" />
+        <activity
+            android:name=".block.main.MainActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".block.login.LoginActivity" />
+        <activity
+            android:name=".block.login.LoginActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".block.task.TaskActivity" />
-        <activity android:name=".block.others.StarIntroduceActivity" />
+        <activity
+            android:name=".block.task.TaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.others.StarIntroduceActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".block.others.CatCheatsActivity" />
-        <activity android:name=".block.rank.RankActivity" />
-        <activity android:name=".block.others.WebViewActivity" />
-        <activity android:name=".block.others.IndexActivity1" />
-        <activity android:name=".block.others.IndexActivity2" />
-        <activity android:name=".block.others.WayActivity" />
-        <activity android:name=".block.record.RecordActivity" />
+        <activity
+            android:name=".block.others.CatCheatsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.rank.RankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.others.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.others.IndexActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.others.IndexActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.others.WayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".block.record.RecordActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".block.record.LandRecordActivity"
             android:screenOrientation="landscape" />

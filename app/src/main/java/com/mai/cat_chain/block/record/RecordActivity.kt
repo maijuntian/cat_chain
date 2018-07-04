@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.support.v4.view.ViewPager
 import android.view.Gravity
 import android.view.View
+import android.widget.HorizontalScrollView
 import com.mai.cat_chain.MyApplication
 import com.mai.cat_chain.R
 import com.mai.cat_chain.base.BaseActivity
@@ -25,6 +26,8 @@ import kotlinx.android.synthetic.main.activity_record.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import java.util.*
+import kotlin.concurrent.timer
+import kotlin.concurrent.timerTask
 
 /**
  * Created by maijuntian on 2018/6/15.
@@ -133,7 +136,7 @@ class RecordActivity : BaseActivity(), RecordContract.View {
 
     override fun queryHRecordSuccess(data: RecordList) {
         hRecordList = data
-        presenter.queryMRecord(Dateutils.getBeforeWeekDate(), Dateutils.getNowDate())
+        presenter.queryMRecord(beginTime!!, endTime!!)
     }
 
     override fun queryMRecordSuccess(data: RecordList) {
@@ -163,13 +166,27 @@ class RecordActivity : BaseActivity(), RecordContract.View {
                 val yLine: YLineChartView = viewHolder.findViewById(R.id.yLine)
                 val xLine: XLineChartView = viewHolder.findViewById(R.id.xLine)
 
+                val hsvScroll : HorizontalScrollView = viewHolder.findViewById(R.id.hsv_scroll)
+
                 yLine.setDatas(data!!.income, data.outcome)
                 xLine.setDatas(data.income, data.outcome)
+
+                Timer().schedule(timerTask {
+                    MLog.log("执行了")
+                    hsvScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
+                }, 1000L)
+
             }
 
         }
 
-        lv_record.adapter = RecordAdapter(hRecordList!!.detail)
+        if(rb_button_h.isChecked){
+            lv_record.adapter = RecordAdapter(hRecordList!!.detail)
+            vp_chart.currentItem = 0
+        } else {
+            lv_record.adapter = RecordAdapter(mRecordList!!.detail)
+            vp_chart.currentItem = 1
+        }
     }
 
 
@@ -212,6 +229,7 @@ class RecordActivity : BaseActivity(), RecordContract.View {
         initTimePicker(tpv_year2, tpv_month2, tpv_day2, year2, month2, day2)
 
         dialog.show()
+
     }
 
     private fun initTimePicker(tpv_year: TimePickerView, tpv_month: TimePickerView, tpv_day: TimePickerView,

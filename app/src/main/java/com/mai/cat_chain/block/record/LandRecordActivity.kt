@@ -2,6 +2,7 @@ package com.mai.cat_chain.block.record
 
 import android.annotation.SuppressLint
 import android.support.v4.view.ViewPager
+import android.widget.HorizontalScrollView
 import com.mai.cat_chain.MyApplication
 import com.mai.cat_chain.R
 import com.mai.cat_chain.base.BaseActivity
@@ -9,6 +10,7 @@ import com.mai.cat_chain.javabean.RecordList
 import com.mai.cat_chain.javabean.User
 import com.mai.cat_chain.net.schedules.SchedulerProvider
 import com.mai.cat_chain.utils.Dateutils
+import com.mai.cat_chain.utils.MLog
 import com.mai.cat_chain.widget.XLineChartLandView
 import com.mai.cat_chain.widget.XLineChartView
 import com.mai.cat_chain.widget.YLineChartLandView
@@ -16,6 +18,8 @@ import com.mai.cat_chain.widget.YLineChartView
 import com.mai.xmai_fast_lib.baseadapter.BaseViewHolder
 import com.mai.xmai_fast_lib.baseadapter.BaseViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_record_land.*
+import java.util.*
+import kotlin.concurrent.timerTask
 
 /**
  * Created by maijuntian on 2018/6/15.
@@ -91,9 +95,14 @@ class LandRecordActivity : BaseActivity() {
 
                 val yLine: YLineChartLandView = viewHolder!!.findViewById(R.id.yLine)
                 val xLine: XLineChartLandView = viewHolder.findViewById(R.id.xLine)
+                val hsvScroll: HorizontalScrollView = viewHolder.findViewById(R.id.hsv_scroll)
 
                 yLine.setDatas(data!!.income, data.outcome)
                 xLine.setDatas(data!!.income, data.outcome)
+
+                Timer().schedule(timerTask {
+                    hsvScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
+                }, 1000L)
             }
 
         }

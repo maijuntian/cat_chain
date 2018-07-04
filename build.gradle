@@ -22,7 +22,7 @@ allprojects {
         jcenter()
 
         // baseAdapter
-        maven { url "https://jitpack.io" }
+        maven { url "http s://jitpack.io" }
 
         maven {url 'https://dl.bintray.com/jetbrains/anko'}
     }

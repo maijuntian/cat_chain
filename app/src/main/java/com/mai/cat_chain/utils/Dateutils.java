@@ -13,7 +13,7 @@ public class Dateutils {
 
     public static String getBeforeWeekDate() {
         Calendar calendar = Calendar.getInstance();
-        calendar.roll(Calendar.DATE, -7);
+        calendar.set(Calendar.DAY_OF_YEAR, calendar.get(Calendar.DAY_OF_YEAR) - 7);
         return new SimpleDateFormat(FORMAT).format(calendar.getTime());
     }
 
